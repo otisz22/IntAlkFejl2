@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="login.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Belépési oldal</title>
+  </head>
+  <body>
+    <form onsubmit="handleLogin(event)" id="login-form">
+      <label for="username">Felhasználó:</label>
+      <input
+        type="username"
+        placeholder="username"
+        name="username"
+        id="username"
+      />
+      <label for="password">Jelszó:</label>
+      <input
+        type="password"
+        placeholder="password"
+        name="password"
+        id="password"
+      />
+
+      <button type="submit" onclick="">Bejelentkezés</button>
+    </form>
+  </body>
+</html>

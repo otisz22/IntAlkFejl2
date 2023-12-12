@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="login.js"></script>
+    <script defer src="data.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Kezelőfelület</title>
+  </head>
+  <body>
+    <button onclick="handleLogout()" id="logout">Logout</button>
+    <form onsubmit="handleAdd(event)" id="add-form">
+      <label for="name">Név:</label>
+      <input type="name" placeholder="név" name="name" id="name" />
+      <label for="age">Életkor:</label>
+      <input type="age" placeholder="életkor" name="age" id="age" />
+      <button type="submit" onclick="">Hozzáad</button>
+    </form>
+
+    <div id="content"></div>
+  </body>
+  <script>
+    const isLoggedIn = sessionStorage.getItem("isLoggedIn");
+
+    if (!isLoggedIn) {
+      window.location.href = "index.html";
+    }
+  </script>
+</html>
